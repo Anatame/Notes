@@ -7,5 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
-    <Grid></Grid>
+    <Grid>
+        <TextBox
+            x:Name="NoteInput"
+            AcceptsReturn="True"
+            TextWrapping="Wrap" />
+    </Grid>
 </Page>
