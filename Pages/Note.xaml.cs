@@ -5,7 +5,7 @@ using MUXC = Microsoft.UI.Xaml.Controls;
 namespace Notes.Pages
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// The note tab content page holding the note text.
     /// </summary>
     public sealed partial class Note : Page
     {
