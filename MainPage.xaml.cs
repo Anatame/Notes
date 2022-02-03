@@ -7,7 +7,7 @@ using MUXC = Microsoft.UI.Xaml.Controls;
 namespace Notes
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// The main page of the app containing the tabs.
     /// </summary>
     public sealed partial class MainPage : Page
     {
@@ -37,27 +37,27 @@ namespace Notes
         }
 
         /// <summary>
-        /// Change the core title bar with a custom title bar to allow
+        /// Changes the core title bar with a custom title bar to allow
         /// interaction with TabView extended into the title bar area
-        /// while still having a draggable region to move the app window
+        /// while still having a draggable region to move the app window.
         /// </summary>
         private void ChangeTitleBar()
         {
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
 
-            // Register a handler for when the size of the overlaid caption control changes.
-            // For example, when the app moves to a screen with a different DPI.
+            // Register a handler for when the size of the overlaid caption control changes
+            // For example, when the app moves to a screen with a different DPI
             coreTitleBar.LayoutMetricsChanged += CoreTitleBar_LayoutMetricsChanged;
 
-            // Set new title bar element as a draggable region.
+            // Set new title bar element as a draggable region
             Window.Current.SetTitleBar(CustomDragRegion);
         }
 
         /// <summary>
         /// Creates a new tab in the given TabView and opens it.
         /// </summary>
-        /// <param name="tabView">The TabView to add the new tab in</param>
+        /// <param name="tabView">The TabView to add the new tab in.</param>
         private void CreateTab(MUXC.TabView tabView)
         {
             var tab = new MUXC.TabViewItem()
@@ -80,8 +80,8 @@ namespace Notes
         /// Closes the passed tab in the given TabView.
         /// Closes the app itself if the last open tab is closed too.
         /// </summary>
-        /// <param name="tabView">The TabView containing the tab</param>
-        /// <param name="tab">The tab to close</param>
+        /// <param name="tabView">The TabView containing the tab.</param>
+        /// <param name="tab">The tab to close.</param>
         private void CloseTab(MUXC.TabView tabView, MUXC.TabViewItem tab)
         {
             //TODO: Confirm before closing the tab if its changed but unsaved
