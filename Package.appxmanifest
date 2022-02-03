@@ -15,8 +15,8 @@
 
   <Properties>
     <DisplayName>Notes</DisplayName>
-    <PublisherDisplayName>Svass</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <PublisherDisplayName>SFM61319</PublisherDisplayName>
+    <Logo>Assets\Images\Icons\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -33,17 +33,18 @@
       EntryPoint="Notes.App">
       <uap:VisualElements
         DisplayName="Notes"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Notes"
+        Square150x150Logo="Assets\Images\Icons\Square150x150Logo.png"
+        Square44x44Logo="Assets\Images\Icons\Square44x44Logo.png"
+        Description="The better text editor for Windows"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Images\Icons\Wide310x150Logo.png" Square71x71Logo="Assets\Images\Icons\SmallTile.png" Square310x310Logo="Assets\Images\Icons\LargeTile.png" ShortName="Notes">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\Images\Icons\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
-
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>
