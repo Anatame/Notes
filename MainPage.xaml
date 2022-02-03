@@ -14,6 +14,15 @@
             VerticalAlignment="Stretch"
             Loading="Tabs_Loading"
             AddTabButtonClick="Tabs_AddTabButtonClick"
-            TabCloseRequested="Tabs_TabCloseRequested" />
+            TabCloseRequested="Tabs_TabCloseRequested">
+
+            <muxc:TabView.TabStripHeader>
+                <Grid x:Name="ShellTitlebarInset" Background="Transparent" />
+            </muxc:TabView.TabStripHeader>
+            <muxc:TabView.TabStripFooter>
+                <Grid x:Name="CustomDragRegion" Background="Transparent" />
+            </muxc:TabView.TabStripFooter>
+
+        </muxc:TabView>
     </Grid>
 </Page>
