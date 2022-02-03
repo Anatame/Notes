@@ -11,6 +11,8 @@
         <TextBox
             x:Name="NoteInput"
             AcceptsReturn="True"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap"
+            Loading="NoteInput_Loading"
+            LosingFocus="NoteInput_LosingFocus" />
     </Grid>
 </Page>
