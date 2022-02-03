@@ -8,5 +8,12 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
-    <Grid></Grid>
+    <Grid>
+        <muxc:TabView
+            x:Name="Tabs"
+            VerticalAlignment="Stretch"
+            Loading="Tabs_Loading"
+            AddTabButtonClick="Tabs_AddTabButtonClick"
+            TabCloseRequested="Tabs_TabCloseRequested" />
+    </Grid>
 </Page>
