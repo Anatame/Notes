@@ -2,6 +2,9 @@
 
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -62,6 +65,10 @@ namespace Notes
 
                 // Ensure the current window is active
                 Window.Current.Activate();
+
+                // Extend Mica app backdrop material into the app's
+                // title bar by extending the app's view into it
+                ExtendAppViewIntoTitleBar();
             }
         }
 
@@ -87,6 +94,20 @@ namespace Notes
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        /// <summary>
+        /// Extends the app's view into the app's core title bar
+        /// </summary>
+        private void ExtendAppViewIntoTitleBar()
+        {
+            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+            var titleBar = ApplicationView.GetForCurrentView().TitleBar;
+
+            // Make the title bar button backgrounds transparent
+            // to fit in with the app view background/backdrop
+            titleBar.ButtonBackgroundColor = Colors.Transparent;
+            titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
     }
 }
