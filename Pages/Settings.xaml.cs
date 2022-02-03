@@ -1,5 +1,7 @@
 ﻿using Windows.UI.Xaml.Controls;
 
+using MUXC = Microsoft.UI.Xaml.Controls;
+
 namespace Notes.Pages
 {
     /// <summary>
