@@ -1,4 +1,5 @@
 ﻿using Windows.ApplicationModel.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -87,10 +88,12 @@ namespace Notes
             //TODO: Confirm before closing the tab if its changed but unsaved
             tabView.TabItems.Remove(tab);
 
-            // If all tabs have been closed, close the app itself
+            // If all tabs have been closed, close the application itself
+            // "Closing" here means suspending the app, and letting Windows
+            // manage the app life cycle based on user activity and necessity
             if (tabView.TabItems.Count == 0)
             {
-                Application.Current.Exit();
+                _ = ApplicationView.GetForCurrentView().TryConsolidateAsync();
             }
         }
 
