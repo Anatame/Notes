@@ -8,11 +8,21 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
         <TextBox
             x:Name="NoteInput"
+            Grid.Row="0"
             AcceptsReturn="True"
             TextWrapping="Wrap"
             Loading="NoteInput_Loading"
             LosingFocus="NoteInput_LosingFocus" />
+
+        <Grid Grid.Row="1" Padding="8" />
+
     </Grid>
 </Page>
