@@ -30,6 +30,12 @@
                 Text="Ln 1, Col 1"
                 ToolTipService.ToolTip="Caret position" />
 
+            <TextBlock
+                x:Name="EditorFontZoom"
+                Padding="8,0,8,0"
+                Text="100%"
+                ToolTipService.ToolTip="Editor font zoom" />
+
         </Grid>
 
     </Grid>
