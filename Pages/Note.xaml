@@ -36,6 +36,12 @@
                 Text="100%"
                 ToolTipService.ToolTip="Editor font zoom" />
 
+            <TextBlock
+                x:Name="LineEnding"
+                Padding="8,0,8,0"
+                Text="Windows (CRLF)"
+                ToolTipService.ToolTip="Line ending" />
+
         </Grid>
 
     </Grid>
