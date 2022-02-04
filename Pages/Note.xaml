@@ -42,6 +42,12 @@
                 Text="Windows (CRLF)"
                 ToolTipService.ToolTip="Line ending" />
 
+            <TextBlock
+                x:Name="Encoding"
+                Padding="8,0,8,0"
+                Text="UTF-8"
+                ToolTipService.ToolTip="Encoding" />
+
         </Grid>
 
     </Grid>
