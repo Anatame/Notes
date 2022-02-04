@@ -22,7 +22,15 @@
             Loading="NoteInput_Loading"
             LosingFocus="NoteInput_LosingFocus" />
 
-        <Grid Grid.Row="1" Padding="8" />
+        <Grid Grid.Row="1" Padding="8">
+
+            <TextBlock
+                x:Name="CaretPosition"
+                Padding="8,0,8,0"
+                Text="Ln 1, Col 1"
+                ToolTipService.ToolTip="Caret position" />
+
+        </Grid>
 
     </Grid>
 </Page>
