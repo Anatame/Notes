@@ -20,6 +20,7 @@
             AcceptsReturn="True"
             TextWrapping="Wrap"
             Loading="NoteInput_Loading"
+            SelectionChanged="NoteInput_SelectionChanged"
             LosingFocus="NoteInput_LosingFocus" />
 
         <Grid Grid.Row="1" Padding="8">
