@@ -24,26 +24,39 @@
 
         <Grid Grid.Row="1" Padding="8">
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
             <TextBlock
                 x:Name="CaretPosition"
+                Grid.Column="1"
                 Padding="8,0,8,0"
                 Text="Ln 1, Col 1"
                 ToolTipService.ToolTip="Caret position" />
 
             <TextBlock
                 x:Name="EditorFontZoom"
+                Grid.Column="2"
                 Padding="8,0,8,0"
                 Text="100%"
                 ToolTipService.ToolTip="Editor font zoom" />
 
             <TextBlock
                 x:Name="LineEnding"
+                Grid.Column="3"
                 Padding="8,0,8,0"
                 Text="Windows (CRLF)"
                 ToolTipService.ToolTip="Line ending" />
 
             <TextBlock
                 x:Name="Encoding"
+                Grid.Column="4"
                 Padding="8,0,8,0"
                 Text="UTF-8"
                 ToolTipService.ToolTip="Encoding" />
