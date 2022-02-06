@@ -12,8 +12,8 @@
         <muxc:TabView
             x:Name="Tabs"
             VerticalAlignment="Stretch"
+            IsAddTabButtonVisible="False"
             Loading="Tabs_Loading"
-            AddTabButtonClick="Tabs_AddTabButtonClick"
             TabCloseRequested="Tabs_TabCloseRequested">
 
             <muxc:TabView.TabStripHeader>

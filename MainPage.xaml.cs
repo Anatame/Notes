@@ -111,11 +111,6 @@ namespace Notes
             }
         }
 
-        private void Tabs_AddTabButtonClick(MUXC.TabView sender, object args)
-        {
-            CreateTab(sender);
-        }
-
         private void Tabs_TabCloseRequested(MUXC.TabView sender, MUXC.TabViewTabCloseRequestedEventArgs args)
         {
             CloseTab(sender, args.Tab);
