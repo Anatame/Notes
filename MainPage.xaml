@@ -44,6 +44,10 @@
                         Click="AddTabSplitButton_Click"
                         ToolTipService.ToolTip="Add tab">
 
+                        <muxc:SplitButton.Flyout>
+                            <muxc:MenuBarItemFlyout Placement="BottomEdgeAlignedLeft" />
+                        </muxc:SplitButton.Flyout>
+
                         <muxc:SplitButton.Resources>
                             <ResourceDictionary>
                                 <ResourceDictionary.ThemeDictionaries>
