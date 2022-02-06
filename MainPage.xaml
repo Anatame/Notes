@@ -19,8 +19,22 @@
             <muxc:TabView.TabStripHeader>
                 <Grid x:Name="ShellTitlebarInset" Background="Transparent" />
             </muxc:TabView.TabStripHeader>
+            
             <muxc:TabView.TabStripFooter>
-                <Grid x:Name="CustomDragRegion" Background="Transparent" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <muxc:SplitButton
+                        x:Name="AddTabSplitButton"
+                        Grid.Column="0"
+                        FontFamily="{ThemeResource SymbolThemeFontFamily}"
+                        Content="&#xE710;" />
+
+                    <Grid x:Name="CustomDragRegion" Grid.Column="1" Background="Transparent" />
+                </Grid>
             </muxc:TabView.TabStripFooter>
 
         </muxc:TabView>
