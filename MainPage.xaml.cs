@@ -111,6 +111,11 @@ namespace Notes
             }
         }
 
+        private void AddTabSplitButton_Click(MUXC.SplitButton sender, MUXC.SplitButtonClickEventArgs args)
+        {
+            CreateTab(Tabs);
+        }
+
         private void Tabs_TabCloseRequested(MUXC.TabView sender, MUXC.TabViewTabCloseRequestedEventArgs args)
         {
             CloseTab(sender, args.Tab);

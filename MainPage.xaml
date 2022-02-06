@@ -40,7 +40,9 @@
                         BorderThickness="{ThemeResource TabViewItemBorderThickness}"
                         Padding="{ThemeResource TabViewItemHeaderPadding}"
                         CornerRadius="{Binding Source={ThemeResource OverlayCornerRadius}, Converter={StaticResource TopCornerRadiusFilterConverter}}"
-                        Content="&#xE710;">
+                        Content="&#xE710;"
+                        Click="AddTabSplitButton_Click"
+                        ToolTipService.ToolTip="Add tab">
 
                         <muxc:SplitButton.Resources>
                             <ResourceDictionary>
