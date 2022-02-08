@@ -31,11 +31,11 @@
                     <muxc:SplitButton
                         x:Name="AddTabSplitButton"
                         Grid.Column="0"
-                        VerticalAlignment="Stretch"
+                        VerticalAlignment="Bottom"
                         FontFamily="{ThemeResource SymbolThemeFontFamily}"
                         FontSize="{ThemeResource TabViewItemHeaderFontSize}"
                         MinHeight="{ThemeResource TabViewItemMinHeight}"
-                        Margin="{ThemeResource TabViewHeaderPadding}"
+                        Margin="4,0"
                         BorderBrush="{ThemeResource TabViewItemBorderBrush}"
                         BorderThickness="{ThemeResource TabViewItemBorderThickness}"
                         Padding="{ThemeResource TabViewItemHeaderPadding}"
