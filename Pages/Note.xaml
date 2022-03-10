@@ -21,7 +21,40 @@
             TextWrapping="Wrap"
             Loading="NoteInput_Loading"
             SelectionChanged="NoteInput_SelectionChanged"
-            LosingFocus="NoteInput_LosingFocus" />
+            LosingFocus="NoteInput_LosingFocus">
+            
+            <TextBox.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Light">
+                            <StaticResource x:Key="TextControlBackground" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBackgroundPointerOver" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBackgroundDisabled" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBorderBrush" ResourceKey="TextControlBorderBrushFocused" />
+                            <StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="TextControlBorderBrushFocused" />
+                            <StaticResource x:Key="TextControlBorderBrushDisabled" ResourceKey="TextControlBorderBrushFocused" />
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Dark">
+                            <StaticResource x:Key="TextControlBackground" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBackgroundPointerOver" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBackgroundDisabled" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBorderBrush" ResourceKey="TextControlBorderBrushFocused" />
+                            <StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="TextControlBorderBrushFocused" />
+                            <StaticResource x:Key="TextControlBorderBrushDisabled" ResourceKey="TextControlBorderBrushFocused" />
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="HighContrast">
+                            <StaticResource x:Key="TextControlBackground" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBackgroundPointerOver" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBackgroundDisabled" ResourceKey="TextControlBackgroundFocused" />
+                            <StaticResource x:Key="TextControlBorderBrush" ResourceKey="TextControlBorderBrushFocused" />
+                            <StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="TextControlBorderBrushFocused" />
+                            <StaticResource x:Key="TextControlBorderBrushDisabled" ResourceKey="TextControlBorderBrushFocused" />
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </TextBox.Resources>
+            
+        </TextBox>
 
         <Grid Grid.Row="1" Padding="8">
 
