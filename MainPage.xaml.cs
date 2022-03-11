@@ -167,5 +167,30 @@ namespace Notes
         {
             OpenSettings(Tabs);
         }
+
+        /// <summary>
+        /// Gets or sets the app requested theme dynamically at runtime.
+        /// </summary>
+        public static ElementTheme AppTheme
+        {
+            get
+            {
+                return ((FrameworkElement)Window.Current.Content).RequestedTheme;
+            }
+
+            set
+            {
+                ((FrameworkElement)Window.Current.Content).RequestedTheme = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the app requested theme, based on theme code, dynamically at runtime.
+        /// </summary>
+        public static int AppThemeCode
+        {
+            get { return (int)AppTheme; }
+            set { AppTheme = (ElementTheme)value; }
+        }
     }
 }
