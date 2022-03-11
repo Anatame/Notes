@@ -45,7 +45,17 @@
                         ToolTipService.ToolTip="Add tab">
 
                         <muxc:SplitButton.Flyout>
-                            <muxc:MenuBarItemFlyout Placement="BottomEdgeAlignedLeft" />
+                            <muxc:MenuBarItemFlyout Placement="BottomEdgeAlignedLeft">
+                                <MenuFlyoutItem
+                                    x:Name="SettingsButton"
+                                    Text="Settings"
+                                    Icon="Setting"
+                                    Click="SettingsButton_Click">
+                                    <MenuFlyoutItem.KeyboardAccelerators>
+                                        <KeyboardAccelerator Key="Decimal" Modifiers="Control" />
+                                    </MenuFlyoutItem.KeyboardAccelerators>
+                                </MenuFlyoutItem>
+                            </muxc:MenuBarItemFlyout>
                         </muxc:SplitButton.Flyout>
 
                         <muxc:SplitButton.Resources>

@@ -12,9 +12,17 @@ namespace Notes
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        /// <summary>
+        /// Keeps track of the settings tab. `null` if settings isn't opened.
+        /// </summary>
+        public static MUXC.TabViewItem SettingsTab { get; private set; }
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            //TODO: Load the settings tab from previous state (default to `null` if settings wasn't open previously)
+            SettingsTab = null;
 
             // Make the TabView interactive while
             // maintaining the mobility of the app window
@@ -78,6 +86,33 @@ namespace Notes
         }
 
         /// <summary>
+        /// Opens settings in a new tab if it already isn't opened,
+        /// else just focuses on the already opened settings tab.
+        /// </summary>
+        /// <param name="tabView">The TabView to open the settings tab in.</param>
+        private void OpenSettings(MUXC.TabView tabView)
+        {
+            // No settings tab is open, create a new one
+            if (SettingsTab is null)
+            {
+                SettingsTab = new MUXC.TabViewItem()
+                {
+                    Header = "Settings",
+                    IconSource= new MUXC.SymbolIconSource() { Symbol = Symbol.Setting }
+                };
+
+                var content = new Frame();
+                SettingsTab.Content = content;
+
+                tabView.TabItems.Add(SettingsTab);
+                content.Navigate(typeof(Pages.Settings));
+            }
+
+            // Focus on the settings tab
+            tabView.SelectedItem = SettingsTab;
+        }
+
+        /// <summary>
         /// Closes the passed tab in the given TabView.
         /// Closes the app itself if the last open tab is closed too.
         /// </summary>
@@ -86,6 +121,13 @@ namespace Notes
         private void CloseTab(MUXC.TabView tabView, MUXC.TabViewItem tab)
         {
             //TODO: Confirm before closing the tab if its changed but unsaved
+
+            // Settings is being closed, set the settings tracker (`SettingsTab`) to null
+            if (tab == SettingsTab)
+            {
+                SettingsTab = null;
+            }
+
             tabView.TabItems.Remove(tab);
 
             // If all tabs have been closed, close the application itself
@@ -119,6 +161,11 @@ namespace Notes
         private void Tabs_TabCloseRequested(MUXC.TabView sender, MUXC.TabViewTabCloseRequestedEventArgs args)
         {
             CloseTab(sender, args.Tab);
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenSettings(Tabs);
         }
     }
 }
